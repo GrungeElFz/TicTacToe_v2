@@ -21,13 +21,27 @@ h1 {
 
 .cell {
     /* border: 1px solid red; */
-    color: black;
-    background-color: lightgray;
 
-    margin: 10px;
+    color: whitesmoke;
     font-size: x-large;
     
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.upper-border {
+    border-top: 0.2em outset lightcyan;
+}
+
+.bottom-border {
+    border-bottom: 0.2em outset lightcyan;
+}
+
+.left-border {
+    border-left: 0.2em outset lightcyan;
+}
+
+.right-border {
+    border-right: 0.2em outset lightcyan;
 }
