@@ -7,16 +7,18 @@ body {
     background-color: rgb(15, 15, 15);
 }
 
+h1 {
+    /* border: 1px solid red; */
+
+    color: whitesmoke;
+}
+
 #board {
     /* border: 1px solid red; */
+
     display: grid;
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: 100px 100px 100px;
-}
-
-h1 {
-    /* border: 1px solid red; */
-    color: whitesmoke;
 }
 
 .cell {
@@ -44,4 +46,33 @@ h1 {
 
 .right-border {
     border-right: 0.2em outset lightcyan;
+}
+
+#bottom {
+    /* border: 1px solid red; */
+
+    text-align: center;
+    margin: 2em;
+    padding: 2em;
+    width: 15em;
+
+}
+
+h2 {
+    /* border: 1px solid red; */
+
+    color: whitesmoke;
+    padding: 0.5em;
+
+    text-transform: uppercase;
+}
+
+#reset_Btn {
+    /* border: 1px solid red; */
+    
+    border: 0.4em outset lightcyan;
+    color: lightcyan;
+    background-color: transparent;
+
+    text-transform: uppercase;
 }

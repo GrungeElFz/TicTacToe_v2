@@ -5,9 +5,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Tic Tac Toe</h1>
 
-    <div id="board">
+    <header>
+        <h1>Tic Tac Toe</h1>
+    </header>
+
+    <main id="board">
         <div data-index="0" class="cell bottom-border right-border">1</div>
         <div data-index="1" class="cell bottom-border left-border right-border">2</div>
         <div data-index="2" class="cell bottom-border left-border ">3</div>
@@ -17,6 +20,12 @@
         <div data-index="6" class="cell upper-border right-border">7</div>
         <div data-index="7" class="cell upper-border left-border right-border">8</div>
         <div data-index="8" class="cell upper-border left-border ">9</div>
-    </div>
+    </main>
+
+    <bottom id="bottom">
+        <h2>X wins</h2>
+        <button id="reset_Btn">Reset</button>
+    </bottom>
+    
 </body>
 </html>
