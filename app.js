@@ -20,17 +20,13 @@ const reset = document.getElementById('reset_Btn');
 // HELPER FUNCTIONS
 const cellClick = (event) => {
     const cell = event.target;
-    console.log(cell);
-    
     cell.innerHTML = `${turn}`
 }
 
 const changeTurn = (event) => {
-    if (turn === gameState.players[0]) {
-        turn = gameState.players[1]
-    } else {
-        turn = gameState.players[0]
-    }
+    turn === gameState.players[0]
+    ? turn = gameState.players[1]
+    : turn = gameState.players[0]
 }
 
 
