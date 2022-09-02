@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>Tic Tac Toe</title>
+    <script defer src="./app.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,19 +12,19 @@
     </header>
 
     <main id="board">
-        <div data-index="0" class="cell bottom-border right-border">1</div>
-        <div data-index="1" class="cell bottom-border left-border right-border">2</div>
-        <div data-index="2" class="cell bottom-border left-border ">3</div>
-        <div data-index="3" class="cell upper-border bottom-border right-border">4</div>
-        <div data-index="4" class="cell upper-border bottom-border left-border right-border">5</div>
-        <div data-index="5" class="cell upper-border bottom-border left-border ">6</div>
-        <div data-index="6" class="cell upper-border right-border">7</div>
-        <div data-index="7" class="cell upper-border left-border right-border">8</div>
-        <div data-index="8" class="cell upper-border left-border ">9</div>
+        <div data-index="0" class="cell bottom-border right-border"></div>
+        <div data-index="1" class="cell bottom-border left-border right-border"></div>
+        <div data-index="2" class="cell bottom-border left-border "></div>
+        <div data-index="3" class="cell upper-border bottom-border right-border"></div>
+        <div data-index="4" class="cell upper-border bottom-border left-border right-border"></div>
+        <div data-index="5" class="cell upper-border bottom-border left-border "></div>
+        <div data-index="6" class="cell upper-border right-border"></div>
+        <div data-index="7" class="cell upper-border left-border right-border"></div>
+        <div data-index="8" class="cell upper-border left-border "></div>
     </main>
 
     <bottom id="bottom">
-        <h2>X wins</h2>
+        <h2 id="message">X wins</h2>
         <button id="reset_Btn">Reset</button>
     </bottom>
     
