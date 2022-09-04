@@ -39,7 +39,7 @@ const cellClick = (event) => {
 const changeTurn = (event) => {
     turn === gameState.players[0]
     ? turn = gameState.players[1]
-    : turn = gameState.players[0]
+    : turn = gameState.players[0] 
 }
 
 const checkConditions = () => {
@@ -59,6 +59,21 @@ const checkConditions = () => {
         { return console.log('Third row') }
 
     else if (gameState.board[0] !== null
+        && gameState.board[0] === gameState.board[3]
+        && gameState.board[0] === gameState.board[6])
+        { return console.log('First column') }
+
+    else if (gameState.board[1] !== null
+        && gameState.board[1] === gameState.board[4]
+        && gameState.board[1] === gameState.board[7])
+        { return console.log('Second column') }
+
+    else if (gameState.board[2] !== null
+        && gameState.board[2] === gameState.board[5]
+        && gameState.board[2] === gameState.board[8])
+        { return console.log('Third column') }
+        
+    else if (gameState.board[0] !== null
         && gameState.board[0] === gameState.board[4]
         && gameState.board[0] === gameState.board[8])
         { return console.log('\ Diagonal') }
@@ -72,6 +87,8 @@ const checkConditions = () => {
         && gameState.board[3] && gameState.board[4] && gameState.board[5]
         && gameState.board[6] && gameState.board[7] && gameState.board[8])
         { return console.log('Draw') }
+
+    else { return } ;
 }
 
 
