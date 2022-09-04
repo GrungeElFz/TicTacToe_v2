@@ -14,7 +14,7 @@ let turn = gameState.players[0];
 // DOM SELECTORS
 const cells = document.querySelectorAll('.cell');
 const bottomArea = document.getElementById('bottom');
-const message = document.getElementById('message');
+const stat = document.getElementById('stat');
 const resetButton = document.getElementById('reset_Btn');
 
 
