@@ -46,22 +46,32 @@ const checkConditions = () => {
     if (gameState.board[0] !== null
         && gameState.board[0] === gameState.board[1]
         && gameState.board[0] === gameState.board[2])
-        { console.log('First row') }
+        { return console.log('First row') }
 
     else if (gameState.board[3] !== null
         && gameState.board[3] === gameState.board[4]
         && gameState.board[3] === gameState.board[5])
-        { console.log('Second row') }
+        { return console.log('Second row') }
 
     else if (gameState.board[6] !== null
         && gameState.board[6] === gameState.board[7]
         && gameState.board[6] === gameState.board[8])
-        { console.log('Third row') }
+        { return console.log('Third row') }
+
+    else if (gameState.board[0] !== null
+        && gameState.board[0] === gameState.board[4]
+        && gameState.board[0] === gameState.board[8])
+        { return console.log('\ Diagonal') }
+
+    else if (gameState.board[2] !== null
+        && gameState.board[2] === gameState.board[4]
+        && gameState.board[2] === gameState.board[6])
+        { return console.log('/ Diagonal') }
 
     else if (gameState.board[0] && gameState.board[1] && gameState.board[2]
         && gameState.board[3] && gameState.board[4] && gameState.board[5]
         && gameState.board[6] && gameState.board[7] && gameState.board[8])
-        { console.log('Draw') }
+        { return console.log('Draw') }
 }
 
 
