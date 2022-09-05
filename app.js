@@ -36,6 +36,7 @@ const cellClick = (event) => {
     }
     
     cell.innerText = `${turn}`
+    checkConditions()
 }
 
 const changeTurn = (event) => {
@@ -48,49 +49,55 @@ const checkConditions = () => {
     if (gameState.board[0] !== null
         && gameState.board[0] === gameState.board[1]
         && gameState.board[0] === gameState.board[2])
-        { return console.log('First row') }
+        { return showWinner() }
 
     else if (gameState.board[3] !== null
         && gameState.board[3] === gameState.board[4]
         && gameState.board[3] === gameState.board[5])
-        { return console.log('Second row') }
+        { return showWinner() }
 
     else if (gameState.board[6] !== null
         && gameState.board[6] === gameState.board[7]
         && gameState.board[6] === gameState.board[8])
-        { return console.log('Third row') }
+        { return showWinner() }
 
     else if (gameState.board[0] !== null
         && gameState.board[0] === gameState.board[3]
         && gameState.board[0] === gameState.board[6])
-        { return console.log('First column') }
+        { return showWinner() }
 
     else if (gameState.board[1] !== null
         && gameState.board[1] === gameState.board[4]
         && gameState.board[1] === gameState.board[7])
-        { return console.log('Second column') }
+        { return showWinner() }
 
     else if (gameState.board[2] !== null
         && gameState.board[2] === gameState.board[5]
         && gameState.board[2] === gameState.board[8])
-        { return console.log('Third column') }
+        { return showWinner() }
         
     else if (gameState.board[0] !== null
         && gameState.board[0] === gameState.board[4]
         && gameState.board[0] === gameState.board[8])
-        { return console.log('\ Diagonal') }
+        { return showWinner() }
 
     else if (gameState.board[2] !== null
         && gameState.board[2] === gameState.board[4]
         && gameState.board[2] === gameState.board[6])
-        { return console.log('/ Diagonal') }
+        { return showWinner() }
 
     else if (gameState.board[0] && gameState.board[1] && gameState.board[2]
         && gameState.board[3] && gameState.board[4] && gameState.board[5]
         && gameState.board[6] && gameState.board[7] && gameState.board[8])
-        { return console.log('Draw') }
+        { return stat.innerText = `Draw` }
 
     else { return } ;
+}
+
+const showWinner = () => {
+    if (turn) {
+        stat.innerText = `${turn} wins`;
+    }
 }
 
 const reset = () => {
@@ -106,3 +113,12 @@ cells.forEach((cell) => {
 })
 
 resetButton.addEventListener("click", reset);
+
+
+
+// enter our names and have them displayed
+// have our order chosen for us by the game
+// take turns placing our marks in empty spaces
+// not be able to place our marks in an occupied space
+// be told when a move causes a player to win, or to draw
+// start the game over without having to reset the browser === refresh === cmd + r
