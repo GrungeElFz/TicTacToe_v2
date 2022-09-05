@@ -11,11 +11,13 @@ const gameState = {
 let turn = gameState.players[0];
 
 
+
 // DOM SELECTORS
 const cells = document.querySelectorAll('.cell');
 const bottomArea = document.getElementById('bottom');
 const stat = document.getElementById('stat');
 const resetButton = document.getElementById('reset_Btn');
+
 
 
 // HELPER FUNCTIONS
@@ -32,7 +34,7 @@ const cellClick = (event) => {
         gameState.board[cellIndex] = gameState.players[1]
         turn = gameState.players[1]
     }
-
+    
     cell.innerText = `${turn}`
 }
 
@@ -91,6 +93,11 @@ const checkConditions = () => {
     else { return } ;
 }
 
+const reset = () => {
+    window.location.reload();
+}
+
+
 
 // EVENT LISTENERS
 cells.forEach((cell) => {
@@ -98,3 +105,4 @@ cells.forEach((cell) => {
     cell.addEventListener("click", changeTurn, { once: true });
 })
 
+resetButton.addEventListener("click", reset);
